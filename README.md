@@ -1,142 +1,256 @@
-**🎮 Pokemon Card App**
-A beautiful and interactive Pokemon card application built with React that fetches data from the PokeAPI and displays Pokemon information in an elegant card layout.
+# 🎮 Pokemon Card App
 
-***📝 Short Description***
-Interactive Pokemon card app built with React. Features search functionality, detailed stats display, and smooth animations. Developed to learn and practice useState and useEffect hooks while fetching data from PokeAPI. Responsive design with beautiful UI/UX.
+A beautiful and interactive **Pokemon card application** built with **React** that fetches data from the **PokeAPI** and displays Pokemon information in an elegant card layout.
+
+---
+# SCREENSHOTS
 <img width="1916" height="1028" alt="image" src="https://github.com/user-attachments/assets/82d5d626-8346-4db2-afa8-3011c0d6ebaf" />
 <img width="1903" height="1025" alt="image" src="https://github.com/user-attachments/assets/27a301e9-9f74-4c70-8352-c8e4398109b2" />
 
-**LiveLink**
-https://pokemonwebsiteusingreact.netlify.app/
+# 📝 Short Description
 
-***📸 Features***
+Interactive Pokemon card app built with React.
+Features **search functionality, detailed stats display, and smooth animations**.
 
-Pokemon Grid Display - Browse through Pokemon in a responsive card grid layout
-Search Functionality - Search for your favorite Pokemon by name
-Detailed Stats - View comprehensive Pokemon information including:
+Developed to learn and practice **React hooks (`useState`, `useEffect`)** while fetching data from an external API.
 
-Height & Weight
-Speed & Attack stats
-Base Experience
-Abilities
-Types with color-coded badges
+Responsive design with a clean and modern **UI/UX**.
 
+🔗 **Live Demo:**
+[https://pokemonwebsiteusingreact.netlify.app/](https://pokemonwebsiteusingreact.netlify.app/)
 
-Smooth Animations - Hover effects and card transitions for better UX
-Responsive Design - Works seamlessly on desktop and mobile devices
+---
 
-***🚀 Technologies Used***
+# 📸 Features
 
-React - JavaScript library for building user interfaces
-PokeAPI - RESTful Pokemon API for data fetching
-CSS3 - Modern styling with custom properties and animations
-Urbanist Font - Clean and modern typography
+### 🟢 Pokemon Grid Display
 
-***📚 What I Learned***
+Browse Pokemon in a responsive **card grid layout**.
 
-This project helped me master essential React hooks:
-useState Hook
+### 🔎 Search Functionality
 
-Managing component state for Pokemon data
-Handling search input state
-Controlling loading and error states
-Filtering Pokemon based on user input
+Search for your favorite Pokemon by name.
 
-useEffect Hook
+### 📊 Detailed Stats
 
-Fetching data from external APIs on component mount
-Understanding dependency arrays
-Handling side effects in functional components
-Cleanup and optimization techniques
+View detailed Pokemon information including:
 
-***🛠️ Installation & Setup***
+* Height & Weight
+* Speed & Attack Stats
+* Base Experience
+* Abilities
+* Types with color-coded badges
 
-Clone the repository
+### ✨ Smooth Animations
 
-bashgit clone https://github.com/yourusername/pokemon-card-app.git
+* Hover effects
+* Card transitions
+* Interactive UI
+
+### 📱 Responsive Design
+
+Works smoothly on:
+
+* Desktop
+* Tablet
+* Mobile devices
+
+---
+
+# 🚀 Technologies Used
+
+* **React** – JavaScript library for building user interfaces
+* **PokeAPI** – RESTful Pokemon API for fetching data
+* **CSS3** – Modern styling and animations
+* **Urbanist Font** – Clean and modern typography
+
+---
+
+# 📚 What I Learned
+
+This project helped me understand important **React fundamentals**.
+
+## useState Hook
+
+* Managing Pokemon data
+* Handling search input
+* Controlling loading and error states
+* Filtering Pokemon based on user input
+
+## useEffect Hook
+
+* Fetching data from APIs
+* Running code when components load
+* Understanding dependency arrays
+* Handling side effects
+* Cleanup techniques
+
+---
+
+# 🛠️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/pokemon-card-app.git
 cd pokemon-card-app
+```
 
-Install dependencies
+### 2️⃣ Install Dependencies
 
-bashnpm install
+```bash
+npm install
+```
 
-Start the development server
+### 3️⃣ Start Development Server
 
-bashnpm start
+```bash
+npm start
+```
 
-Open your browser
-Navigate to http://localhost:3000
+### 4️⃣ Open in Browser
 
-***📁 Project Structure***
+```
+http://localhost:3000
+```
+
+---
+
+# 📁 Project Structure
+
+```
 pokemon-card-app/
+│
 ├── src/
 │   ├── components/
-│   │   └── Card.jsx          # Pokemon card component
-│   ├── App.jsx                # Main application component
-│   ├── styles.css             # Global styles
-│   └── index.js               # Entry point
+│   │   └── Card.jsx        # Pokemon Card Component
+│   │
+│   ├── App.jsx             # Main Application
+│   ├── styles.css          # Global Styles
+│   └── index.js            # Entry Point
+│
 ├── public/
 ├── package.json
 └── README.md
+```
 
-***💡 Key Concepts Demonstrated***
-State Management
-javascriptconst [pokemon, setPokemon] = useState([]);
+---
+
+# 💡 Key Concepts Demonstrated
+
+## State Management
+
+```javascript
+const [pokemon, setPokemon] = useState([]);
 const [search, setSearch] = useState("");
 const [loading, setLoading] = useState(true);
-API Integration
-javascriptuseEffect(() => {
+```
+
+---
+
+## API Integration
+
+```javascript
+useEffect(() => {
   const fetchPokemon = async () => {
-    // Fetch Pokemon data from PokeAPI
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon');
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon");
     const data = await response.json();
     setPokemon(data.results);
   };
-  
+
   fetchPokemon();
 }, []);
-Search Filtering
-javascriptconst filteredPokemon = pokemon.filter(p => 
+```
+
+---
+
+## Search Filtering
+
+```javascript
+const filteredPokemon = pokemon.filter(p =>
   p.name.toLowerCase().includes(search.toLowerCase())
 );
-***🎨 Design Features***
+```
 
-Blob Effect Background - Organic, morphing shapes on card hover
-Grid Layout - Responsive auto-fit grid system
-Type Badges - Color-coded Pokemon type indicators
-Smooth Transitions - 0.3s transform and shadow transitions
-Card Elevation - Box shadows for depth and hierarchy
+---
 
-***🔮 Future Enhancements***
+# 🎨 Design Features
 
- Add Pokemon detail modal on card click
- Implement type filtering
- Add generation filters
- Include evolution chains
- Add favorite/bookmark functionality
- Implement pagination for better performance
- Add loading skeletons
- Dark mode toggle
+* **Blob Effect Background** – Morphing shapes on hover
+* **Responsive Grid Layout** – Auto-fit layout system
+* **Type Badges** – Color-coded Pokemon types
+* **Smooth Transitions** – 0.3s animations
+* **Card Elevation** – Shadows for depth
 
-***🤝 Contributing***
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+---
 
-Fork the project
-Create your feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
-Open a Pull Request
+# 🔮 Future Enhancements
 
-***📝 License***
-This project is open source and available under the MIT License.
-***🙏 Acknowledgments***
+* Pokemon detail modal on card click
+* Type filtering
+* Generation filters
+* Evolution chain display
+* Favorite / Bookmark system
+* Pagination for performance
+* Loading skeletons
+* Dark mode toggle 🌙
 
-PokeAPI - The amazing RESTful Pokemon API
-Pokemon Company - For creating the Pokemon universe
-React community for excellent documentation and resources
+---
 
-***📧 Contact***
-Muhammad Hassan
-Project Link: https://github.com/TechHassan06/PokemonWebsiteUsingReactHooks
-⭐ If you found this project helpful, please give it a star!
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a feature branch
+
+```bash
+git checkout -b feature/AmazingFeature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add AmazingFeature"
+```
+
+4. Push to the branch
+
+```bash
+git push origin feature/AmazingFeature
+```
+
+5. Open a Pull Request
+
+---
+
+# 📝 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 🙏 Acknowledgments
+
+* **PokeAPI** for the free Pokemon API
+* **Pokemon Company** for creating the Pokemon universe
+* **React Community** for amazing documentation
+
+---
+
+# 📧 Contact
+
+**Muhammad Hassan**
+
+GitHub Project:
+[https://github.com/TechHassan06/PokemonWebsiteUsingReactHooks](https://github.com/TechHassan06/PokemonWebsiteUsingReactHooks)
+
+⭐ If you found this project useful, consider giving it a **star**!
+
+---
+
+Made with ❤️ using **React**
+
+---
+
 Made with ❤️ and React
