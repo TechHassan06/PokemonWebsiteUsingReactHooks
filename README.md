@@ -1,7 +1,7 @@
 **🎮 Pokemon Card App**
 A beautiful and interactive Pokemon card application built with React that fetches data from the PokeAPI and displays Pokemon information in an elegant card layout.
 
-***📝 Short Description (for GitHub)***
+***📝 Short Description***
 Interactive Pokemon card app built with React. Features search functionality, detailed stats display, and smooth animations. Developed to learn and practice useState and useEffect hooks while fetching data from PokeAPI. Responsive design with beautiful UI/UX.
 <img width="1916" height="1028" alt="image" src="https://github.com/user-attachments/assets/82d5d626-8346-4db2-afa8-3011c0d6ebaf" />
 <img width="1903" height="1025" alt="image" src="https://github.com/user-attachments/assets/27a301e9-9f74-4c70-8352-c8e4398109b2" />
